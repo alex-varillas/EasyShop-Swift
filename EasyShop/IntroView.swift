@@ -9,7 +9,15 @@ import SwiftUI
 
 struct IntroView: View {
     var body: some View {
-        /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Hello, world!@*/Text("Hello, world!")/*@END_MENU_TOKEN@*/
+        VStack {
+            Image("background")
+                .resizable()
+                .scaledToFit()
+                .frame(height: 400)
+        }
+        .padding()
+        .background(.gray.opacity(0.12))
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
     }
 }
 

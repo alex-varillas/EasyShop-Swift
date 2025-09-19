@@ -29,31 +29,32 @@ struct HomeView: View {
                 TextField("Search", text: .constant(""))
             }
             .overlay {
-                RoundedRectangle(cornerRadius: 16).stroke(.green, lineWidth: 1)
+                RoundedRectangle(cornerRadius: 16).stroke(Color(red: 0.15, green: 0.55, blue: 0.50), lineWidth: 1)
             }.padding(EdgeInsets(top: 8, leading: 16, bottom: 8, trailing: 16))
             
             
             HStack {
-                Image("gato2")
+                Image("dog")
                     .resizable()
-                    .scaledToFill()
-                    .frame(height: 188)
+                    .scaledToFit()
+                    .frame(height: 190)
                         
-            
                 Spacer()
                 VStack {
-                    Button(action: {}) {
-                        Text("Shop now")
-                            .padding()
-                            .foregroundStyle(.black)
-                            .background(.yellow, in: RoundedRectangle(cornerRadius: 16))
+                    Button("Show now") {
+                    
                     }
+                    .padding(.vertical, 12)
+                    .padding(.horizontal, 10)
+                    .font(.headline)
+                    .foregroundStyle(Color(red: 0.15, green: 0.55, blue: 0.50))
+                    .background(.yellow, in: RoundedRectangle(cornerRadius: 16))
                 }
             }
             .padding()
             .frame(maxWidth: .infinity)
             .frame(height: 192)
-            .background(.green, in: RoundedRectangle(cornerRadius: 32))
+            .background(Color(red: 0.15, green: 0.55, blue: 0.50), in: RoundedRectangle(cornerRadius: 32))
             .padding(EdgeInsets(top: 16, leading: 16, bottom: 8, trailing: 16))
             
             Spacer()
@@ -61,7 +62,6 @@ struct HomeView: View {
             
         }
         .background(.gray.opacity(0.12))
-        .tint(.green)
     }
 }
 
