@@ -34,13 +34,11 @@ struct HomeView: View {
             
             
             HStack {
-                Image("dog")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(height: 190)
-                        
-                Spacer()
                 VStack {
+                    Text("Special offers for you")
+                        .foregroundStyle(.background)
+                        .font(.headline)
+                    
                     Button("Show now") {
                     
                     }
@@ -50,15 +48,33 @@ struct HomeView: View {
                     .foregroundStyle(Color(red: 0.15, green: 0.55, blue: 0.50))
                     .background(.yellow, in: RoundedRectangle(cornerRadius: 16))
                 }
+                
+                Image("dog")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 190)
             }
             .padding()
             .frame(maxWidth: .infinity)
             .frame(height: 192)
             .background(Color(red: 0.15, green: 0.55, blue: 0.50), in: RoundedRectangle(cornerRadius: 32))
-            .padding(EdgeInsets(top: 16, leading: 16, bottom: 8, trailing: 16))
+            .padding(EdgeInsets(top: 2, leading: 16, bottom: 2, trailing: 16))
+            
+            HStack {
+                Text("Products")
+                    .font(.headline)
+                
+                Spacer()
+                
+                Button(action: {}) {
+                    Text("See all")
+                        .foregroundStyle(.black)
+                        .font(.subheadline)
+                }
+            }
+            .padding()
             
             Spacer()
-            
             
         }
         .background(.gray.opacity(0.12))

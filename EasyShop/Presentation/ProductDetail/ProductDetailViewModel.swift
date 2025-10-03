@@ -14,6 +14,9 @@ class ProductDetailViewModel: ObservableObject {
         quantity += 1
     }
 
-    
+    func decreaseQuantity() {
+        guard quantity > 1 else { return }
+        quantity -= 1
+    }
     
 }
